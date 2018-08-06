@@ -146,7 +146,7 @@ Minor in Mechanical Engineering}
 %%% Selected Class Work
 %%% ------------------------------------------------------------
 \NewPart{Selected Classes}{}
-\vspace*{-0.5em}
+\vspace*{-1em}
 \begin{multicols}{3}
 \CoarseEntry{Intermediate Fluid Dynamics}
 \CoarseEntry{Theory of Elasticity}
@@ -160,35 +160,34 @@ Minor in Mechanical Engineering}
 \end{multicols}
 %%% Research
 %%% ------------------------------------------------------------
-\vspace*{-1.5em}
+\vspace*{-2em}
 \NewPart{Research Projects}{}
-\ResearchEntry{A scalable Schur-complement fluids solver for heterogeneous compute platforms}{2014-2016}{Developed a domain decomposition method for solving large scale poisson problem utilizing muti-accelerators(GPU,Intel PHI) platforms by minimizing the communication across PCI-E.}
-\ResearchEntry{Power Diagrams and Sparse Paged Grids for High Resolution Adaptive Liquids}{2016-2017}{Developed a second-order accurate adaptive free surface fluid simulatior. Contributions includes: an high resolution level set tracking and advection scheme; fast marching on octree; 2nd order poisson discretization and solver for adaptive grid using power diagram.}
-\ResearchEntry{Narrow-Band Topology Optimization on a Sparsely Populated Grid}{2017-2018}{Developed an efficient Multigrid precondition conjugate gradient solver using SIMD instructions which enables billion degrees of freedom topology optimization.}
+\ResearchEntry{A Scalable Schur-complement Fluids Solver for Heterogeneous Compute Platforms}{2014-2016}{Developed a domain decomposition method for solving large scale poisson problem utilizing muti-accelerators(GPU, Intel PHI) platforms by minimizing the communication across PCI-E.}
+\ResearchEntry{Power Diagrams and Sparse Paged Grids for High Resolution Adaptive Liquids}{2016-2017}{Developed a second-order accurate adaptive free surface fluid simulator. Contributions includes: an high resolution level set tracking and advection scheme; fast marching on octree; 2nd order poisson discretization and solver for adaptive grid using power diagram.}
+\ResearchEntry{Narrow-Band Topology Optimization on a Sparsely Populated Grid}{2017-2018}{Developed an efficient Multigrid precondition conjugate gradient solver using SIMD instructions which enabled billion degrees of freedom topology optimization.}
 \ResearchEntry{Stencil Aware Multigrid Method for Linear Elasticity}{2018}{Improved the convergence of the geometric multigrid method for linear elasticity by introducing additional auxiliary variables.}
-\ResearchEntry{Hierarchical Direct Solver For Cartesian Grid Discretization}{2018}{Developed a hierarchical direct solver using Schur-complement method that requires significant less memory than other direct solvers, s.t PARDISO.}
+\ResearchEntry{Hierarchical Direct Solver for Cartesian Grid Discretization}{2018}{Developed a memory efficient hierarchical direct solver for cartesian grid discretization, using recursive Schur-complement method. }
 \ResearchEntry{SPGrid Plugin for Renderman\texttrademark}{2016-2018}{Developed SPGrid levelset and volume rendering plugin for Renderman\texttrademark}
 \vspace*{-1em}
 %%% Skills
 %%% ------------------------------------------------------------
 \NewPart{Skills}{}
-
-\SkillsEntry{Languages}{Chinese (native tongue),English (fluent)}
+\SkillsEntry{Languages}{Chinese (native language),English (fluent)}
 \SkillsEntry{Programing}{\textsc{C++}, \textsc{CUDA},  \textsc{JAVA}, \textsc{Matlab}, GLSL, Intel Intrinsics, MPI, OpenMP}
 \SkillsEntry{Softwares} {Blender, Renderman, PARDISO, Unity3D}
 \SkillsEntry{Education}{Fluid Dynamics, Continuum Mechanics, Finite Element Method}
 \SkillsEntry{}{Multigrid Method, Linear Algebra, Numerical Solvers}
-
+\vspace*{-1em}
 %%% Publications
 %%% ------------------------------------------------------------
-%%%\NewPart{Publications}{}
-%\Publication{M. Aanjaneya*, M. Gao*, \textbf{H. Liu}, C. Batty, E. Sifakis }{"Power Diagrams and Sparse Paged Grids for High Resolution Adaptive Liquids"}{ACM Transactions on Graphics 36:4 (Proceedings of ACM SIGGRAPH), 2017}
-%\Publication{\textbf{H. Liu}, N. Mitchell, M. Aanjaneya, E. Sifakis}{ "A scalable Schur-complement fluids solver for heterogeneous compute platforms"}{ ACM Transactions on Graphics 35:6 (Proceedings of ACM SIGGRAPH Asia), 2016}
+\NewPart{Publications}{}
+\Publication{M. Aanjaneya*, M. Gao*, \textbf{H. Liu}, C. Batty, E. Sifakis }{"Power Diagrams and Sparse Paged Grids for High Resolution Adaptive Liquids"}{ACM Transactions on Graphics 36:4 (Proceedings of ACM SIGGRAPH), 2017}
+\Publication{\textbf{H. Liu}, N. Mitchell, M. Aanjaneya, E. Sifakis}{ "A scalable Schur-complement fluids solver for heterogeneous compute platforms"}{ ACM Transactions on Graphics 35:6 (Proceedings of ACM SIGGRAPH Asia), 2016}
 %%% References
 %%% ------------------------------------------------------------
-\vspace*{-1em}
-\NewPart{References}{}
-\ReferenceEntry{Eftychios Sifakis}{(Acedemic Advisor)}
-{University of Wisconsin Madison}
-{sifakis@cs.wisc.edu}
+%%\vspace*{-1em}
+%%\NewPart{References}{}
+%%\ReferenceEntry{Eftychios Sifakis}{(Acedemic Advisor)}
+%%{University of Wisconsin Madison}
+%%{sifakis@cs.wisc.edu}
 \end{document}
