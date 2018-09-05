@@ -1,0 +1,198 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTeX Template: Curriculum Vitae
+%
+% Source: http://www.howtotex.com/
+% Feel free to distribute this template, but please keep the
+% referal to HowToTeX.com.
+% Date: July 2011
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% How to use writeLaTeX: 
+%
+% You edit the source code here on the left, and the preview on the
+% right shows you the result within a few seconds.
+%
+% Bookmark this page and share the URL with your co-authors. They can
+% edit at the same time!
+%
+% You can upload figures, bibliographies, custom classes and
+% styles using the files menu.
+%
+% If you're new to LaTeX, the wikibook is a great place to start:
+% http://en.wikibooks.org/wiki/LaTeX
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[paper=a4,fontsize=10pt]{scrartcl} % KOMA-article class
+							
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{amsmath,amsfonts,amsthm}     % Math packages
+\usepackage{graphicx}                    % Enable pdflatex
+\usepackage[svgnames]{xcolor}            % Colors by their 'svgnames'
+\usepackage{geometry}
+	\textheight=700px                    % Saving trees ;-)
+\usepackage{url}
+\usepackage{indentfirst}
+\usepackage{multicol}
+\frenchspacing              % Better looking spacings after periods
+\pagestyle{empty}           % No pagenumbers/headers/footers
+
+%%% Custom sectioning (sectsty package)
+%%% ------------------------------------------------------------
+\usepackage{sectsty}
+
+\sectionfont{%			            % Change font of \section command
+	\usefont{OT1}{phv}{b}{n}%		% bch-b-n: CharterBT-Bold font
+	\sectionrule{0pt}{0pt}{-5pt}{3pt}}
+
+%%% Macros
+%%% ------------------------------------------------------------
+\newlength{\spacebox}
+\settowidth{\spacebox}{8888888888}			% Box to align text
+\newcommand{\sepspace}{\vspace*{1em}}		% Vertical space macro
+
+\newcommand{\MyName}[1]{ % Name
+		\huge \usefont{OT1}{phv}{b}{n} \hfill #1
+		\par \normalsize \normalfont}
+		
+\newcommand{\MySlogan}[1]{ % Slogan (optional)
+		\usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
+		\par \normalsize \normalfont}
+
+\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}\vspace*{-0.3em}}
+
+\newcommand{\PersonalEntry}[2]{
+		\noindent\hangindent=2em\hangafter=0 % Indentation
+		\parbox{\spacebox}{        % Box to align text
+		\textit{#1}}		       % Entry name (birth, address, etc.)
+		\hspace{1.5em} #2 \par}    % Entry value
+
+\newcommand{\SkillsEntry}[2]{      % Same as \PersonalEntry
+		\noindent\hangindent=2em\hangafter=0 % Indentation
+		\parbox{\spacebox}{        % Box to align text
+		\textit{#1}}			   % Entry name (birth, address, etc.)
+		\hspace{1.5em} #2 \par}    % Entry value	
+		
+\newcommand{\ReferenceEntry}[4]{				  % Same as \EducationEntry
+		\noindent\hangindent=2em\hangafter=0\textbf{#1} #2 \par  % Relation
+		\hspace{2.5em} \textit{#3} \par              % Address #1
+		\hspace{2.5em} \small #4 % Email
+		\normalsize \par}
+		
+\newcommand{\EducationEntry}[4]{
+		\noindent \textbf{#1} \hfill      % Study
+		\colorbox{White}{%
+			\parbox{6em}{%
+			\hfill\color{Black}#2}} \par  % Duration
+		\noindent \textit{#3} \par        % School
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par}
+
+\newcommand{\WorkEntry}[4]{				  % Same as \EducationEntry
+		\noindent \textbf{#1} \hfill      % Jobname
+		\colorbox{White}{\color{Black}#2} \par  % Duration
+		\noindent \textit{#3} \par              % Company
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par}
+		
+\newcommand{\ResearchEntry}[3]{				  % Same as \EducationEntry
+		\noindent \textbf{#1} \hfill    \par% Jobname
+		\noindent\hangindent=2em\hangafter=0 \small #3 % Description
+		\hfill \colorbox{White}{\color{Black}#2}   % Duration
+		\normalsize \par}		
+
+\newcommand{\CoarseEntry}[1]{				  % Same as \EducationEntry
+		\noindent #1 \hfill
+		\normalsize \par}
+
+\newcommand{\ProjectEntry}[2]{				  % Same as \EducationEntry
+		\noindent \textbf{#1}  \par    % Course name
+		\hfill \noindent\hangindent=2em\hangafter=0 \small #2 % Project
+		\normalsize \par}
+
+\newcommand{\Publication}[3]{	\indent	  
+		\noindent #1\small       % Names
+		\noindent \textit{#2} % Title
+		\noindent #3\small \par              % Journal
+		\normalsize \par}
+%%% Begin Document
+%%% ------------------------------------------------------------
+\begin{document}
+% you can upload a photo and include it here...
+%\begin{wrapfigure}{l}{0.5\textwidth}
+%	\vspace*{-2em}
+%		\includegraphics[width=0.15\textwidth]{photo}
+%\end{wrapfigure}
+\vspace*{-5em}
+\MyName{Haixiang Liu}\vspace*{0.5em}
+\MySlogan{(608) 320 6837}
+\MySlogan{\url{cs.lhxac@gmail.com}}\vspace*{-1em}
+%\sepspace
+%%% Education
+%%% ------------------------------------------------------------
+\vspace*{-1.5em}
+\NewPart{Education}{}
+\EducationEntry{Ph.D. in Computer Sciences}{2012-Present}{University of Wisconsin - Madison}{Area of Research - High efficiency Numerical Solvers for Large Scale Sparse Linear Systems.\newline 
+Minor in Mechanical Engineering}
+\sepspace
+\EducationEntry{BSc. in Computer Science and Applied Mathematics}{2007-2011}{Hong Kong University of Science and Technology}{}
+\vspace*{-2em}
+%%% Work experience
+%%% ------------------------------------------------------------
+\NewPart{Work experience}{}
+\EducationEntry{Research Intern}{2016 Summer}{Disney Animation Studio, Internship}{Developed an adaptive FEM simulation framework for animation production pipeline}
+\vspace*{-1.2em}
+%%% Selected Class Work
+%%% ------------------------------------------------------------
+\NewPart{Selected Classes}{}
+\vspace*{-1em}
+\begin{multicols}{3}
+\CoarseEntry{Intermediate Fluid Dynamics}
+\CoarseEntry{Theory of Elasticity}
+\CoarseEntry{Finite Elements}
+\CoarseEntry{Automatic Controls Lab}
+\CoarseEntry{Advanced Machine Learning}
+\CoarseEntry{Adv Computer Architecture}
+\CoarseEntry{Nonlinear Optimization}
+\CoarseEntry{FE for Biomechanics}
+\CoarseEntry{Computer Animation}
+\end{multicols}
+%%% Research
+%%% ------------------------------------------------------------
+\vspace*{-2em}
+\NewPart{Research Projects}{}
+\ResearchEntry{A Scalable Schur-complement Fluids Solver for Heterogeneous Compute Platforms}{2014-2016}{Developed a domain decomposition method for solving large scale poisson problem utilizing muti-accelerators(GPU, Intel PHI) platforms by minimizing the communication across PCI-E.}
+\ResearchEntry{Power Diagrams and Sparse Paged Grids for High Resolution Adaptive Liquids}{2016-2017}{Developed a second-order accurate adaptive free surface fluid simulator. Contributions includes: an high resolution level set tracking and advection scheme; fast marching on octree; 2nd order poisson discretization and solver for adaptive grid using power diagram.}
+\ResearchEntry{Narrow-Band Topology Optimization on a Sparsely Populated Grid}{2017-2018}{Developed an efficient Multigrid precondition conjugate gradient solver using SIMD instructions which enabled billion degrees of freedom topology optimization on a single workstation.}
+\ResearchEntry{Stencil Aware Multigrid Method for Linear Elasticity}{2018-present}{To improve the convergence of the geometric multigrid method for linear elasticity by introducing additional auxiliary variables.}
+\ResearchEntry{Hierarchical Direct Solver for Cartesian Grid Discretization}{2018-present}{Developed a memory efficient hierarchical direct solver for cartesian grid discretization, using recursive Schur-complement method. }
+\ResearchEntry{SPGrid Plugin for Renderman\texttrademark}{2016-2018}{Developed SPGrid levelset and volume rendering plugin for Renderman\texttrademark}
+\vspace*{-1.2em}
+%%% Skills
+%%% ------------------------------------------------------------
+\NewPart{Skills}{}
+\SkillsEntry{Languages}{Chinese (native language),English (fluent)}
+\SkillsEntry{Programing}{\textsc{C++}, \textsc{CUDA},  \textsc{JAVA}, \textsc{Matlab}, GLSL, Intel Intrinsics, MPI, OpenMP}
+\SkillsEntry{Softwares} {Blender, Renderman, PARDISO, Unity3D}
+\SkillsEntry{Education}{Fluid Dynamics, Continuum Mechanics, Finite Element Method}
+\SkillsEntry{}{Multigrid Method, Linear Algebra, Numerical Solvers}
+\vspace*{-1.2em}
+%%% Publications
+%%% ------------------------------------------------------------
+\NewPart{Publications}{}
+\Publication{\textbf{H. Liu*}, Y. Hu*, B. Zhu, W. Matusik, E. Sifakis}{ "Narrow-Band Topology Optimization on a Sparsely Populated Grid"}{(Submitted to, and Accepted by Proceedings of ACM SIGGRAPH Asia), 2018}
+\Publication{M. Aanjaneya*, M. Gao*, \textbf{H. Liu}, C. Batty, E. Sifakis }{"Power Diagrams and Sparse Paged Grids for High Resolution Adaptive Liquids"}{ACM Transactions on Graphics 36:4 (Proceedings of ACM SIGGRAPH), 2017}
+\Publication{\textbf{H. Liu}, N. Mitchell, M. Aanjaneya, E. Sifakis}{ "A scalable Schur-complement fluids solver for heterogeneous compute platforms"}{ ACM Transactions on Graphics 35:6 (Proceedings of ACM SIGGRAPH Asia), 2016}
+%%% References
+%%% ------------------------------------------------------------
+%%\vspace*{-1em}
+\NewPart{References}{}
+\ReferenceEntry{Eftychios Sifakis}{(Acedemic Advisor)}
+{University of Wisconsin Madison}
+{sifakis@cs.wisc.edu}
+\NewPart{References}{}
+\ReferenceEntry{Mridul Aanjaneya}{}
+{Rutgers University}
+{Mridul.Aanjaneya@rutgers.edu}
+\end{document}

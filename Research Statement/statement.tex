@@ -32,6 +32,10 @@ We developed a Domain Decomposition Method that utilize multiple accelerators fo
 
 \section*{Research interests}
 
+\textbf{Linear Cost Numerical Solvers for Simulation.} Numerical simulations often require solving large sparse linear systems. But conventional sparse solvers have super-linear cost. When venturing into higher resolution, this super-linear cost makes the solve stage dominating the total simulation time. There is a class of solvers named multigrid method that can provide a solution at linear cost for homogeneous problems. But with domains of complex geometry and largely varying materials, the convergence of the algorithm decrease drastically and lost it's linear cost property. I am currently investigating algorithms that can restore the convergence property of the multigrid method even under complex domains.
+
+\textbf{Validation of Simulation for Non-linear Elasticity.} Validation is an important process when acquired a simulation result, for it is the confidence that the result is useful in predicting reality. There are two aspects of validation: First, the validation of the numerical solution converges to the continuous solution under refinement. Second is the validation of the material model in describing the physical material. For materials such as metal or concrete, the linear elastic material model has proven to be effect and accurate. But for soft materials that are still only vary limit understanding in the accuracy of the simulation results. I am interested in developing frameworks for the validation of simulation results for soft materials.
+
 \begin{thebibliography}{99}
 
 \bibitem{TopOptimization}
